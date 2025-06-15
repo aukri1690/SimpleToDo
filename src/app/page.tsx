@@ -1,9 +1,9 @@
-import ToDoListInputForm from '@/components/ToDoListInputForm';
+import ToDoList from '@/components/ToDoList';
 
 const Home = () => {
   return (
     <>
-      <ToDoListInputForm />
+      <ToDoList />
     </>
   )
 }
