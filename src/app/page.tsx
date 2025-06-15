@@ -1,6 +1,10 @@
+import ToDoListInputForm from '@/components/ToDoListInputForm';
+
 const Home = () => {
-  return(
-    <h1>Hello Next.js</h1>
+  return (
+    <>
+      <ToDoListInputForm />
+    </>
   )
 }
 
