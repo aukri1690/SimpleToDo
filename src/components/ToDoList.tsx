@@ -17,7 +17,7 @@ const ToDoList = () => {
         setPostContents(prev => [{ toDoListContents }, ...prev]);
         setToDoListContents('');
     };
-    
+
     return (
         <>
             <Flex align="center" justify="center" flexDir="column" gap={5}>
@@ -25,7 +25,7 @@ const ToDoList = () => {
                     <InputGroup startElement={<GiCheckMark />}>
                         <Input
                             placeholder="やること"
-                            size='lg'
+                            size='xl'
                             variant='outline'
                             css={{ '--focus-color': 'white' }}
                             value={toDoListContents}
@@ -34,7 +34,7 @@ const ToDoList = () => {
                     <Button
                         variant="outline"
                         colorPalette='purple'
-                        size='lg'
+                        size='xl'
                         onClick={handlePost}>
                         追加
                     </Button>
@@ -44,13 +44,20 @@ const ToDoList = () => {
                     <CheckboxCard.Root
                         key={idx}
                         w={{ base: "70%", md: "30%" }}
+                        size='sm'
                         maxW="sm"
-                        variant="outline"
-                        colorPalette='purple'>
+                        variant="outline">
                         <CheckboxCard.Control>
-                            <CheckboxCard.HiddenInput />
-                            <CheckboxCard.Label>{item.toDoListContents}</CheckboxCard.Label>
-                            <CheckboxCard.Indicator />
+                            <Flex justify="space-between" align="center" w="100%">
+                                <CheckboxCard.Label>
+                                    {item.toDoListContents}
+                                </CheckboxCard.Label>
+                                <Button
+                                    variant="outline"
+                                    colorPalette='purple'>
+                                    完了
+                                </Button>
+                            </Flex>
                         </CheckboxCard.Control>
                     </CheckboxCard.Root>
                 ))}
