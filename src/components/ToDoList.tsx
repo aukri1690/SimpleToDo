@@ -14,8 +14,12 @@ const ToDoList = () => {
 
     const handlePost = () => {
         if (!toDoListContents) return;
-        setPostContents(prev => [{ toDoListContents }, ...prev]);
         setToDoListContents('');
+        setPostContents(prev => [{ toDoListContents }, ...prev]);
+    };
+
+    const handleDelete = (index: number) => {
+        setPostContents((prev) => prev.filter((_, i) => i !== index));
     };
 
     return (
@@ -53,6 +57,7 @@ const ToDoList = () => {
                                     {item.toDoListContents}
                                 </CheckboxCard.Label>
                                 <Button
+                                    onClick={() => handleDelete(idx)}
                                     variant="outline"
                                     colorPalette='purple'>
                                     完了
