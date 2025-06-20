@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Flex, Input, InputGroup, Group, Button, CheckboxCard } from "@chakra-ui/react"
-import { GiCheckMark } from "react-icons/gi";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 type PostItem = {
     toDoListContents: string;
@@ -26,7 +26,7 @@ const ToDoList = () => {
         <>
             <Flex align="center" justify="center" flexDir="column" gap={5}>
                 <Group w={{ base: "70%", md: "30%" }} attached maxW="sm" mt={10}>
-                    <InputGroup startElement={<GiCheckMark />}>
+                    <InputGroup startElement={<FaRegCircleCheck color='green' />}>
                         <Input
                             placeholder="やること"
                             size='xl'
