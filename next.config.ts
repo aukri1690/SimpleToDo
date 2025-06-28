@@ -3,4 +3,3 @@ export default {
     optimizePackageImports: ["@chakra-ui/react"],
   },
 }
-
