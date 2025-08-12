@@ -81,14 +81,14 @@ const ToDoList = () => {
                         <Input
                             placeholder="やること"
                             size='xl'
-                            variant='outline'
-                            css={{ '--focus-color': 'cyan' }}
+                            variant='flushed'
+                            css={{ '--focus-color': 'white' }}
                             value={toDoListContents}
                             onChange={(e) => setToDoListContents(e.target.value)} />
                     </InputGroup>
                     <Button
                         variant="outline"
-                        colorPalette='cyan'
+                        colorPalette='purple'
                         size='xl'
                         onClick={handlePost}>
                         追加
@@ -110,7 +110,7 @@ const ToDoList = () => {
                                 <Button
                                     onClick={() => handleDelete(item.id)}
                                     variant="outline"
-                                    colorPalette='cyan'>
+                                    colorPalette='purple'>
                                     完了
                                 </Button>
                             </Flex>
